@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTI Scraper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <form class="m-5" method="post">
+            <div class="form-group">
+                <label for="url_source">Link</label>
+                <input type="text" class="form-control" id="url_source" name="url_source" placeholder="insert bti link">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="report_type" id="exampleRadios1" value="base">
+                <label class="form-check-label" for="exampleRadios1">
+                    Basic
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="report_type" id="exampleRadios2" value="full" checked>
+                <label class="form-check-label" for="exampleRadios2">
+                    Full
+                </label>
+            </div>
+            <button class="btn btn-primary" type="submit">Get report</button>
+        </form>
+    </div>
+</body>
+
+</html>

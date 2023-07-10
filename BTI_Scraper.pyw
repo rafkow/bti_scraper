@@ -1,7 +1,7 @@
 from tkinter import Radiobutton, StringVar, Tk, messagebox, Frame, Button, Label, Entry
 from tkinter.constants import HORIZONTAL
 from tkinter.ttk import Progressbar
-from ec_europa import get_bti
+from app.ec_europa import get_bti
 import threading
 
 

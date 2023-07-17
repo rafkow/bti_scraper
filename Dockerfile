@@ -10,16 +10,9 @@ EXPOSE 8000
 
 ARG DEV=false
 RUN python -m venv /py && \
-    /py/bin/pip install --upgrade pip && \
-    /py/bin/pip install -r /tmp/requirements.txt && \
-    rm -rf /tmp && \
-    adduser \
-        --disabled-password \
-        --no-create-home \
-        django-user
+    /py/bin/pip install --upgrade pip
 
 ENV PATH="/py/bin:$PATH"
-
-USER django-user
-
-CMD ["/py/bin/flask", "run", "--host=0.0.0.0" "--port=8000"]
+RUN /py/bin/pip install -r /tmp/requirements.txt
+ENV FLASK_APP app.py
+CMD ["flask", "run", "--host", "0.0.0.0", "--port", "8000"]

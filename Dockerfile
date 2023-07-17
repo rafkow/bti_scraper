@@ -22,4 +22,4 @@ ENV PATH="/py/bin:$PATH"
 
 USER django-user
 
-CMD ["/py/bin/flask", "run", "--host=0.0.0.0"]
+CMD ["/py/bin/flask", "run", "--host=0.0.0.0" "--port=8000"]
